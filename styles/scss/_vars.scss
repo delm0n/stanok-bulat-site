@@ -1,0 +1,213 @@
+.content-container-new {
+  margin: 0px auto;
+  max-width: 1170px;
+  padding: 20px;
+}
+
+%content-margin-80 {
+  margin-top: 80px;
+
+  @media (max-width: 768px) {
+    margin-top: 60px;
+  }
+}
+
+%content-margin-100 {
+  margin-top: 100px;
+
+  @media (max-width: 768px) {
+    margin-top: 60px;
+  }
+}
+
+%content-margin-120 {
+  margin-top: 120px;
+
+  @media (max-width: 768px) {
+    margin-top: 90px;
+  }
+}
+
+.button__yellow {
+  background: #fd9e00;
+  border-radius: 10px;
+  transition: background-color 0.2s ease-in-out;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  font-family: "Gilroy-Medium";
+  width: 250px;
+  height: 74px;
+  margin: 30px 0;
+  text-align: center;
+  padding: 22px 60px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  &:hover {
+    background: #ffb130;
+  }
+}
+
+.title-block {
+  text-align: center;
+  padding: 0 30px;
+  font-family: "Gilroy-Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 73px;
+  text-transform: uppercase;
+  color: #353535;
+  margin-top: 50px;
+
+  span {
+    color: #ff5c00;
+    span {
+      font-family: "Gilroy-Black";
+      font-weight: 900;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 42px;
+    line-height: 40px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0;
+  }
+}
+
+h1.title-block {
+  text-align: center;
+  margin: 0;
+  padding: 0 30px;
+  font-family: "Gilroy-Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 73px;
+  text-transform: uppercase;
+  color: #353535;
+  margin-top: 50px;
+  display: block;
+  letter-spacing: 0;
+
+  @media (max-width: 1024px) {
+    font-size: 42px;
+    line-height: 40px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0;
+  }
+}
+
+.subtitle-block {
+  text-align: center;
+  padding: 0 30px;
+  font-family: "Gilroy-Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 41px;
+  margin: 20px auto 40px;
+  color: #353535;
+
+  @media (max-width: 1024px) {
+    font-size: 27px;
+    line-height: 30px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0;
+  }
+}
+
+%button__orange {
+  width: 220px;
+  padding: 20px 0;
+  text-align: center;
+  background: #ff5c00;
+  border: 0;
+  outline: 0;
+
+  border-radius: 30px;
+  top: 0;
+  margin: 0;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  display: block;
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s;
+
+  position: relative;
+  overflow: hidden;
+
+  $color: #ff5c00;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: lighten($color, 5%);
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    opacity: 0.9;
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

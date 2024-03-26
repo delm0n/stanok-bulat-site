@@ -1,0 +1,398 @@
+.reasons {
+  overflow: hidden;
+
+  .title-block {
+    padding: 0;
+  }
+
+  .subtitle-block {
+    // font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 41px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #858585;
+
+    @media (max-width: 1024px) {
+      font-size: 31px;
+      line-height: 36px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 40px;
+      margin-top: 10px;
+    }
+  }
+
+  .content-container-new {
+    max-width: 1296px;
+    // margin-bottom: 30px;
+    // margin-top: 30px;
+    padding: 0;
+
+    @media (max-width: 1375px) {
+      padding: 0 20px;
+    }
+
+    // @media (max-width: 546px) {
+    //     margin-top: 0;
+    //     margin-bottom: 0;
+    // }
+
+    @media (max-width: 425px) {
+      padding: 0 10px;
+    }
+
+    @extend %content-margin-100;
+  }
+
+  &__item {
+    display: flex;
+    margin-top: 60px;
+    align-items: center;
+
+    @media (max-width: 1439px) {
+      flex-direction: column;
+      margin: 20px auto 0;
+
+      &:nth-child(even) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+
+    .slick-prev,
+    .slick-next {
+      background: #ffffff;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+      // transform: matrix(-1, 0, 0, 1, 0, 0);
+      width: 46px;
+      height: 46px;
+      background-repeat: no-repeat;
+      background-image: url("../images/slider-arrow.svg");
+      background-position: center center;
+    }
+
+    .slick-prev {
+      left: -23px;
+      transform: rotate(0deg);
+    }
+
+    .slick-next {
+      right: -23px;
+      transform: rotate(180deg);
+    }
+
+    &-img {
+      width: 48%;
+
+      @media (max-width: 1439px) {
+        width: 60%;
+      }
+
+      @media (max-width: 1024px) {
+        width: 80%;
+      }
+
+      @media (max-width: 768px) {
+        width: 60%;
+        max-width: 500px;
+      }
+
+      @media (max-width: 425px) {
+        width: 80%;
+        max-width: 500px;
+      }
+    }
+
+    &-content {
+      // width: 100%;
+      padding: 30px 0;
+
+      @media (min-width: 1440px) {
+        padding: 0px;
+        width: 52%;
+
+        &:nth-child(even) {
+          padding-left: 53px;
+        }
+
+        &:nth-child(odd) {
+          padding-right: 53px;
+        }
+      }
+
+      @media (max-width: 1439px) {
+        max-width: 631px;
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        width: 90%;
+        max-width: 500px;
+      }
+
+      &__title {
+        font-family: "Gilroy-Bold";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        color: #353535;
+
+        @media (max-width: 767px) {
+          font-size: 20px;
+          line-height: 24px;
+          text-align: center;
+        }
+      }
+
+      &__text {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 35px;
+        color: #858585;
+
+        span {
+          font-weight: 700;
+          font-family: "Gilroy-Bold";
+        }
+
+        @media (max-width: 767px) {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+
+      ul.reasons__item-content-ul_check {
+        list-style-type: none;
+        margin-top: 30px;
+
+        @media (max-width: 767px) {
+          margin-top: 15px;
+        }
+
+        li.reasons__item-content-ul_check__item {
+          background: url("../images/li-img.svg") no-repeat;
+          // background-position: ;
+          p {
+            padding-left: 70px;
+          }
+
+          @media (max-width: 1279px) {
+            background-size: 30px;
+            p {
+              padding-left: 50px;
+            }
+          }
+
+          ul.reasons__item-content-ul_point {
+            li {
+              &::before {
+                left: 75px;
+
+                @media (max-width: 1279px) {
+                  left: 55px;
+                }
+              }
+            }
+          }
+        }
+
+        li.reasons__item-content-ul_check__item:not(:first-child) {
+          margin-top: 30px;
+
+          @media (max-width: 767px) {
+            margin-top: 15px;
+          }
+        }
+      }
+
+      ul.reasons__item-content-ul_point {
+        margin-top: 0;
+        li {
+          position: relative;
+          padding-left: 25px;
+
+          &::before {
+            content: "\2022";
+            color: #858585;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            top: 8px;
+            left: 5px;
+
+            @media (max-width: 767px) {
+              top: 0;
+            }
+          }
+
+          .__text-pl {
+            margin-left: 20px;
+          }
+        }
+      }
+
+      &-offer {
+        margin-top: 50px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        @media (max-width: 768px) {
+          justify-content: center;
+        }
+
+        @media (max-width: 535px) {
+          flex-direction: column;
+          margin-top: 40px;
+        }
+
+        .offer__price-block {
+          &_oldprice-row {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+          }
+
+          &_discount {
+            position: relative;
+
+            svg {
+              width: 69px;
+              height: 35px;
+            }
+
+            @media (max-width: 767px) {
+              svg {
+                width: 55px;
+                height: 28px;
+              }
+            }
+
+            span {
+              position: absolute;
+              top: 6px;
+              left: 5px;
+              font-family: "Gilroy-Bold";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 24px;
+              letter-spacing: 0.05em;
+
+              color: #ffffff;
+
+              @media (max-width: 767px) {
+                font-size: 15px;
+                line-height: 18px;
+              }
+            }
+          }
+
+          &_oldprice {
+            font-family: "Gilroy-Black";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 35px;
+            line-height: 63%;
+            text-decoration-line: line-through;
+            color: #a7a7a7;
+
+            @media (max-width: 767px) {
+              font-size: 28px;
+              line-height: 22px;
+            }
+          }
+
+          &_newprice {
+            font-family: "Gilroy-Black";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 60px;
+            line-height: 37%;
+            color: #323232;
+            margin-top: 25px;
+
+            @media (max-width: 767px) {
+              font-size: 48px;
+              line-height: 22px;
+              margin-top: 10px;
+            }
+          }
+        }
+
+        .offer__button-block .my-button {
+          @extend %button__orange;
+        }
+      }
+
+      .reasons__gnutik-img {
+        display: grid;
+        grid-template-columns: repeat(4, max-content);
+        gap: 20px;
+
+        @media (max-width: 767px) {
+          grid-template-columns: repeat(2, max-content);
+          justify-content: center;
+          justify-items: center;
+        }
+
+        @media (max-width: 425px) {
+          grid-template-columns: repeat(2, 1fr);
+          justify-content: center;
+          justify-items: center;
+        }
+      }
+    }
+
+    .__text-tech {
+      margin-bottom: 30px;
+    }
+  }
+
+  img {
+    @media (min-width: 769px) {
+      max-width: 631px;
+      margin: 0 auto;
+    }
+  }
+
+  .slick-slide img {
+    margin: 0 auto;
+  }
+}
+
+#reasons-torsion {
+  .content-container-new {
+    @extend %content-margin-80;
+  }
+
+  .reasons__item {
+    @media (max-width: 1439px) {
+      &:nth-child(odd) {
+        flex-direction: column-reverse;
+      }
+
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+#reasons-gnutik {
+  .content-container-new {
+    @extend %content-margin-80;
+  }
+}

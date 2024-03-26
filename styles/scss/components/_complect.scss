@@ -1,0 +1,138 @@
+#complect {
+  // margin-bottom: 60px;
+
+  .complect-span {
+    @media (max-width: 1240px) {
+      display: block;
+    }
+  }
+
+  .content-container-new {
+    max-width: 1296px;
+    padding: 0;
+
+    @media (max-width: 1375px) {
+      padding: 0 20px;
+    }
+
+    @media (max-width: 425px) {
+      padding: 0 10px;
+    }
+
+    @extend %content-margin-120;
+  }
+
+  .title-block {
+    br {
+      display: none;
+      @media (max-width: 425px) {
+        display: block;
+      }
+    }
+
+    @media (max-width: 340px) {
+      font-size: 20.5px;
+    }
+  }
+
+  .subtitle-block {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 146%;
+    color: #858585;
+    margin-bottom: 40px;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  .complect-wrap {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+
+    @media (max-width: 1023px) {
+      flex-direction: column;
+    }
+
+    .complect-img-block {
+      width: 53%;
+
+      @media (max-width: 1023px) {
+        width: 70%;
+      }
+
+      @media (max-width: 425px) {
+        width: 100%;
+      }
+    }
+
+    .complect-button {
+      margin-top: 40px;
+
+      .my-button {
+        @extend %button__orange;
+
+        @media (max-width: 1023px) {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .complect-table {
+    display: grid;
+    grid-template-columns: 225px 225px;
+
+    div {
+      padding: 20px 27px;
+      border: 1px #d3d3d3 solid;
+      color: #434343;
+      font-size: 17px;
+      /* font-family: 'Gilroy-Regular', Arial, sans-serif; */
+      line-height: 1.35;
+      font-weight: 400;
+      background-position: center center;
+      height: 64px;
+    }
+
+    &__lastprice {
+      padding-top: 16px !important;
+    }
+
+    &-select {
+      background-color: #e2e2e2;
+      font-weight: 800;
+    }
+
+    &-price_old {
+      text-decoration: line-through;
+    }
+
+    &-price_new {
+      font-weight: 800;
+      font-size: 24px;
+    }
+
+    @media (max-width: 468px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      &__lastprice {
+        padding-top: 5px !important;
+      }
+
+      &-price_new {
+        font-weight: 600;
+      }
+
+      & div {
+        padding: 20px;
+      }
+    }
+  }
+}

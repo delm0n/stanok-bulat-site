@@ -1,0 +1,56 @@
+#gallery.gallery.gallery-new {
+  .content-container-new {
+    @extend %content-margin-120;
+  }
+
+  .columns {
+    margin-top: 0;
+  }
+
+  .images-grid {
+    display: grid;
+    grid-template-columns: 363px 363px 363px;
+    grid-template-rows: 300px 300px;
+    gap: 20px;
+
+    @media (max-width: 1279px) {
+      grid-template-columns: 363px 363px;
+      grid-template-rows: 300px 300px 300px;
+      justify-content: center;
+    }
+
+    @media (max-width: 786px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, auto);
+      justify-content: center;
+    }
+
+    @media (max-width: 426px) {
+      gap: 10px;
+    }
+
+    a.fancybox-gallery {
+      position: relative;
+
+      @media (max-width: 767px) {
+        max-width: 363px;
+        margin: 0 auto;
+      }
+      @media (max-width: 424px) {
+        max-width: 100%;
+      }
+
+      div {
+        display: none;
+        // background: rgba(253, 158, 0, 0.73) url(../images/zoom-in.png) no-repeat scroll 50% 54%;
+        background: rgba(255, 92, 0, 0.6) url("../images/zoom-in.png") no-repeat
+          scroll 50% 54%;
+        color: #fff;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+}

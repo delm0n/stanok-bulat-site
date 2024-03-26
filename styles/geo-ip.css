@@ -1,0 +1,94 @@
+#store{
+    background: transparent url(/images/geoip/store-bg.jpg) no-repeat center center;
+    height: auto;
+    background-size: cover;
+    position: relative;
+    padding: 100px 0 80px;
+}
+.store-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 5;
+}
+#store .columns{
+    position: relative;
+    font-size: 0;
+    line-height: 0;    
+    margin: 0;    
+    z-index: 10;
+    text-align: center;
+}
+.about-store, .store-photos{
+    display: inline-block;
+    vertical-align: top;
+}
+#store .columns p.title{
+    font-family: 'Gilroy-Extrabold', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    color: #ffffff;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 15px;
+}
+#store .columns p.title span{
+    color: #1b81ff;
+}
+.about-store{
+    width: 45%;
+    margin: 0 0 0 2%;
+}
+.store-photos{
+    width: 53%;
+    max-width: 620px;
+    margin: 0;
+}
+.store-photos a{
+    display: inline-block;
+    position: relative;
+    width: 48%;
+    margin: 0 2% 20px 0;
+    vertical-align: top;
+}
+#store .fancybox-gallery div {
+    display: none;
+    background: rgba(0, 82, 152, 0.73) url("../images/zoom-in.png") no-repeat scroll 50% 54%;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+#store .desc{
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+    text-align: left;
+}
+#store .adress{
+    margin: 0 0 15px;
+}
+#store .mode{
+    margin: 0 0 20px;
+}
+
+@media (max-width: 767px){
+    #store{
+        padding: 40px 0;
+    }
+    .about-store, .store-photos{
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .store-photos a{
+        margin: 0 1% 20px;
+    }
+    .store-photos a img{
+        margin: 0 auto;
+    }
+}

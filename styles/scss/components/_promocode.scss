@@ -1,0 +1,85 @@
+.coupon-container {
+  position: relative;
+  padding-bottom: 10px;
+  width: 100%;
+
+  input[name="coupon"] {
+    transition: all 0.3s;
+    outline: 0;
+    width: 100%;
+    margin-bottom: 10px !important;
+
+    &:disabled {
+      background-color: #fbfbfb !important;
+      color: rgba(0, 0, 0, 0.47);
+      user-select: none;
+      transition: all 0.3s 0.2s;
+      box-shadow: 0 6px 20px rgb(45 193 45 / 0%) !important;
+
+      &::placeholder {
+        color: rgba(0, 0, 0, 0);
+      }
+
+      &:hover {
+        transform: translate(0) !important;
+      }
+    }
+
+    &.input-error {
+      border: 1px solid #be1704 !important;
+      box-shadow: 0 0 0 3px rgba(190, 23, 4, 0.5) !important;
+    }
+
+    &.input-success {
+      transition: all 0.2s !important;
+      background-color: #b8e0c5 !important;
+      color: rgba(0, 0, 0, 0) !important;
+      box-shadow: 0 6px 20px rgb(45 193 45 / 15%) !important;
+    }
+  }
+
+  span.coupon-success {
+    position: absolute;
+    display: block;
+    white-space: nowrap;
+    width: auto;
+    color: rgba(0, 0, 0, 0.6);
+    top: 50%;
+    transform: translateY(-100%);
+    left: 36px;
+    transition: opacity 0.1s;
+    font-size: 18px;
+    font-weight: 400;
+
+    @media (max-width: 479px) {
+      left: 50%;
+      transform: translateX(-50%) translateY(-100%);
+      text-align: center;
+    }
+  }
+
+  span.coupon-error {
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    color: #be1704;
+    transition: all 0.3s;
+  }
+
+  .hide-enter-active,
+  .hide-leave-active {
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .expand-enter-active,
+  .expand-leave-active {
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .expand-enter,
+  .expand-leave-to {
+    height: 0;
+  }
+}

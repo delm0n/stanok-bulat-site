@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import "./components/old-style-css";
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(239, 239, 239, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(57, 57, 57, 0.1);
+  z-index: 1;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(239, 239, 239, 0.2);
+}
+
+@import "./vars";
+@import "./components/header";
+@import "./components/materials";
+@import "./components/gallery";
+@import "./components/reasons";
+@import "./components/complect";
+@import "./components/delivery";
+@import "./components/steps";
+@import "./components/feedback";
+@import "./components/tinkoff-block";
+
+#reward,
+#feedback {
+  .content-container {
+    @extend %content-margin-120;
+  }
+}
+
+@import "./components/photo";
+@import "./components/video";
+@import "./components/consultation";
+@import "./components/footer";
+@import "./components/opt";
+
+#order-model,
+#order-modal,
+#calc-delivery,
+#dop-model,
+#dop-modal,
+#quick-order,
+#compare-modal,
+#callme,
+#order-success {
+  form input[type="button"] {
+    @extend %button__orange;
+
+    text-transform: none;
+    width: 100%;
+    padding: 19px 0;
+    max-width: 285px;
+    border: none;
+    height: auto;
+    text-shadow: none;
+    box-shadow: none;
+    margin: 15px auto 20px;
+  }
+}
+
+@import "./components/promocode";
+
+main {
+  overflow: hidden;
+}
+
+#feedback .slick-dots li,
+#feedback .slick-dots li button {
+  font-size: 1px;
+}
+.selectBox::after {
+  top: 50% !important;
+  margin-top: -4px;
+  transition: all 0.4s;
+}
+.selectBox.expanded::after {
+  transform: rotate(180deg);
+}
+
+#header.header .content-container-test_menu {
+  @media (max-width: 576px) {
+    min-height: 45px;
+
+    .header-top-container {
+      height: 45px;
+    }
+  }
+}

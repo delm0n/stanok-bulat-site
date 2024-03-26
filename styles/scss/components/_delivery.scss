@@ -1,0 +1,179 @@
+#delivery {
+    // margin: 120px 0;
+    .content-container-new {
+        max-width: 1296px;
+        padding: 0;
+        margin-top: 180px;
+
+        // @extend %content-margin-120;
+        @media (max-width: 1375px) {
+            padding: 0 20px;
+            margin-top: 120px;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 90px;
+        }
+    }
+
+    .delivery-bg {
+        background: #e3e3e3;
+        border-radius: 120px;
+        position: relative;
+
+        @media (max-width: 1279px) {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            border-radius: 50px;
+        }
+
+        .delivery-human-block {
+            position: absolute;
+            bottom: 0px;
+            left: 31px;
+
+            @media (max-width: 1375px) {
+                width: 39%;
+            }
+
+            @media (min-width:769px) and (max-width:1279px) {
+                display: none;
+            }
+
+            @media (max-width: 1279px) {
+                position: static;
+                margin-left: 10%;
+                width: 61%;
+            }
+        }
+    }
+
+    .delivery-content-block {
+        margin-left: 514px;
+        padding: 40px 136px 40px 71px;
+
+        @media (max-width: 1375px) {
+            margin-left: 39%;
+            padding: 40px 70px;
+        }
+
+        @media (max-width: 1279px) {
+            padding: 40px;
+        }
+
+        @media (max-width: 1279px) {
+            padding: 50px 0px 35px;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        @media (max-width: 600px) {
+            padding: 38px 5px 40px;
+            max-width: 100%;
+        }
+
+        &__title {
+            font-family: "Gilroy";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 73px;
+            color: #353535;
+
+            @media (max-width: 767px) {
+                font-size: 22px;
+                line-height: 27px;
+                text-align: center;
+            }
+        }
+
+        &__text {
+            font-family: "Gilroy";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            color: #323232;
+            margin: 10px 0 30px;
+            span {
+                font-weight: 600;
+            }
+
+            @media (max-width: 767px) {
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+            }
+        }
+
+        &__features {
+            ul {
+                display: flex;
+                margin-bottom: 50px;
+                margin-top: 0;
+                gap: 25px;
+                list-style: none;
+
+                @media (max-width: 767px) {
+                    flex-direction: column;
+                }
+
+                @media (max-width: 600px) {
+                    padding: 0 6px;
+                }
+
+                li {
+                    font-family: "Gilroy";
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: #323232;
+                    position: relative;
+                    padding-left: 24px;
+
+                    @media (max-width: 767px) {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+
+                    span {
+                        font-weight: 500;
+                    }
+
+                    span.pointer {
+                        position: absolute;
+                        left: 0px;
+                        top: 25%;
+                        content: "\2022";
+                        color: #ff5c00;
+                        font-weight: 900;
+                        width: 12px;
+                        // height: 12px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        &__button {
+            margin-bottom: 40px;
+            a[href="#calc-delivery"] {
+                @extend %button__orange;
+
+                @media (max-width: 767px) {
+                    margin: 60px auto 45px;
+                }
+            }
+        }
+
+        &__marks {
+            display: flex;
+            gap: 25px;
+            @media (max-width: 600px) {
+                padding: 0 6px;
+            }
+        }
+    }
+}

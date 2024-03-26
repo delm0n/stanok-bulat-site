@@ -1,0 +1,16 @@
+#video {
+  .content-container {
+    @extend %content-margin-120;
+  }
+
+  .video-container {
+    width: 90%;
+  }
+
+  .video-wrapper {
+    gap: 30px;
+  }
+  .video-item {
+    margin: 0 !important;
+  }
+}
